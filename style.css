@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;900&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;900;400&family=Poppins&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +8,7 @@
 }
 
 body {
-    height: 100vh;
+    height: 200vh;
 }
 
 .navbar {
@@ -33,6 +33,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .nav-link {
@@ -45,7 +50,7 @@ body {
 }
 
 .container {
-    height: 100%;
+    height: 100vh;
 }
 
 .landing-pg {
@@ -86,4 +91,130 @@ body {
     font-size: 40px;
     font-weight: 300;
     letter-spacing: 20px;
+}
+
+.section-div {
+    height: 100%;
+    background-color: #3a0019;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fade-in-book {
+    background-image: url("./assets/book.png");
+    background-size: cover;
+    width: calc(28vw * (3132 / 1136));
+    height: 26vw;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.landing-pg-para {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+}
+
+.text-container-section {
+    text-align: center;
+    width: 40%;
+    height: 30%;
+}
+
+.side-book-1 {
+    background-image: url("./assets/book2-removebg-preview.png");
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: -17.5vw;
+    width: 35vw;
+    height: 35vw;
+    transform: rotate(45deg);
+}
+
+.fade-in-pencil {
+    background-image: url("./assets/Pencil.png");
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: -5vw;
+    width: 30vw;
+    height: 30vw;
+}
+
+.book-falling {
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+}
+
+.book-falling-1 {
+    background-image: url("./assets/book4.png");
+    width: 26.904887vw;
+    height: 26.904887vw;
+    left: 60%;
+    top: 0;
+}
+
+.book-falling-2 {
+    background-image: url("./assets/book6.png");
+    width: 26.801103520757vw;
+    height: 40.706349206349vh;
+    left: 35%;
+    bottom: 25%;
+}
+
+.book-falling-3 {
+    background-image: url("./assets/book5.png");
+    width:  24.172359432475vw;
+    height: 39.153439153439vh;
+    left: 10%;
+    bottom: 5%;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    padding-top: 14%;
+}
+
+.service-box {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+
+.l {
+    clip-path: polygon(0 0, 90% 0, 90% 40%, 100% 50%, 90% 60%, 90% 100%, 0 100%);
+    left: -100%;
+    transform: translate(0%, -50%);
+}
+
+.r {
+    clip-path: polygon(10% 0, 10% 40%, 0 50%, 10% 60%, 10% 100%, 100% 100%, 100% 0);
+    right: -100%;
+}
+
+.book-falling-1:hover .sb1 {
+    opacity: 1;
+}
+
+.book-falling-2:hover .sb2 {
+    opacity: 1;
+}
+
+.book-falling-3:hover .sb3 {
+    opacity: 1;
 }
